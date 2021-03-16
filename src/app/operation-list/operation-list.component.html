@@ -1,0 +1,31 @@
+<ul list-group mt-4>
+    <li *ngFor="let operation of operations" class="list-group-item">
+      <div *ngIf="operation.typeId=='1'">
+        <label class="mr-3">SUM: </label>
+        <i class="mr-3">{{ operation.operator1 }}</i> 
+        +
+        <i class="ml-3">{{ operation.operator2 }}</i>
+        <label class="ml-3">RESULT: </label>
+        <i class="ml-2">{{ operation.result }}</i>
+      </div>  
+      
+      <div *ngIf="operation.typeId=='2'">
+        <label class="mr-3">PRODUCT: </label>
+        <i class="mr-3">{{ operation.operator1 }}</i> 
+        *
+        <i class="ml-3">2</i>
+        <label class="ml-3">RESULT: </label>
+        <i class="ml-2">{{ operation.result }}</i>
+      </div>  
+
+      <div *ngIf="operation.typeId=='3'">
+        <label class="mr-3">POWER: </label>
+        <i class="mr-3">{{ operation.operator1 }}</i> 
+        ^
+        <i class="ml-3">2</i>
+        <label class="ml-3">RESULT: </label>
+        <i class="ml-2">{{ operation.result }}</i>
+      </div>  
+      
+    </li>
+</ul>

@@ -4,48 +4,16 @@
       <div class="card bg-dark my-5">
         <div class="card-body">
           <h1 class="card-title text-center text-white py-3">{{ title }}</h1>
+
+          <app-sum-form></app-sum-form>
+          <app-operation-form operationType='PRODUCT' endpoint='product'></app-operation-form>
+          <app-operation-form operationType='POWER' endpoint='power'></app-operation-form>
           
-          <form class="form-inline">
-            
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="inputNumber1" class="sr-only">Number</label>
-              <input type="text" class="form-control" id="inputNumber1" placeholder="Number">
-            </div>
-            <h3 class="text-white">+</h3>
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="inputNumber2" class="sr-only">Number</label>
-              <input type="text" class="form-control" id="inputNumber2" placeholder="Number">
-            </div>
-            <button type="button" class="btn btn-primary mb-2">SUM</button>
-          </form>
+          <h2 class="text-white mt-5">List of previous operations:</h2>
+          <div class="col-md-10">
+            <app-operation-list></app-operation-list>
+          </div>
 
-          <form class="form-inline">
-            
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="inputNumber3" class="sr-only">Number</label>
-              <input type="text" class="form-control" id="inputNumber3" placeholder="Number">
-            </div>
-            <h4 class="text-white">* 2</h4>
-            
-            <button type="button" class="btn btn-primary mb-2 ml-3">PRODUCT</button>
-          </form>
-
-          <form class="form-inline">
-            
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="inputNumber4" class="sr-only">Number</label>
-              <input type="text" class="form-control" id="inputNumber4" placeholder="Number">
-            </div>
-            <h4 class="text-white">^2</h4>
-            
-            <button type="button" class="btn btn-primary mb-2 ml-3">POWER</button>
-          </form>
-
-          <ul class="list-group mt-4">
-              <li class="list-group-item">SUM (2,3 ) = 5 </li>
-              <li class="list-group-item">PRODUCT ( 5 ) = 10 </li>
-              <li class="list-group-item">PRODUCT ( 8 ) = 64 </li>
-            </ul>  
         </div>
 
       </div>

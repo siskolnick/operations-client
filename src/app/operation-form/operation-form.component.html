@@ -1,0 +1,15 @@
+<form #opForm="ngForm" (ngSubmit)="onSubmit()" class="form-inline">
+            
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="operator1" class="sr-only">Number</label>
+      <input type="text" class="form-control" name="operator1"
+            placeholder="Number" [(ngModel)]="operation.operator1" #operator1="ngModel" required>
+        <p [hidden]="!operator1.pristine" class="alert alert-danger">Number is required</p>
+    </div>
+    <h4 class="text-white" *ngIf="operationType=='PRODUCT'">* 2</h4>
+    <h4 class="text-white" *ngIf="operationType=='POWER'">^ 2</h4>
+    <button type="submit" class="btn btn-primary mb-2 ml-3" 
+                [disabled]="!opForm.form.valid">{{ operationType }}</button>
+    <h4 class="text-white ml-4">{{ message }}</h4>
+</form>
+
