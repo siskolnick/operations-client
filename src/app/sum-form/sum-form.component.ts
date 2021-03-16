@@ -18,7 +18,7 @@ export class SumFormComponent {
   }
 
   onSubmit() {
-    this.message = 'Obteniendo Resultado...';
+    this.message = 'Getting result...';
     this.operationService.setOperationEndpoint('sum'); // SUM
     let firstNumber = this.operation.operator1;
     this.operationService.save(this.operation).subscribe(
